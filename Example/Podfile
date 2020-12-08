@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'ADTool_Example' do
+  pod 'ADTool', :path => '../'
+
+  target 'ADTool_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
