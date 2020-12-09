@@ -1,0 +1,1 @@
+../../../../../ADTool/Classes/SBHYInterstitialAd.h

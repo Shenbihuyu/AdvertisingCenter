@@ -1,0 +1,1 @@
+../../../../../ADTool/Classes/Admob/AdmobBanner.h
