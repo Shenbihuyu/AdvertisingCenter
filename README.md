@@ -17,7 +17,11 @@ ADTool is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ADTool'
+
+#  use_frameworks!   # 要把 use_frameworks! 这句注释了
+
+# pod 'ADTool'
+pod 'ADTool', :git => 'https://github.com/Shenbihuyu/AdvertisingCenter.git'
 
 ```
 
@@ -29,7 +33,9 @@ pod 'ADTool'
     `App Transport Security Settings` 类型为 `Array`  -->  `Allow Arbitrary Loads` 值为 `YES`
  
  - 添加 Google广告的 APPID 
-    `GADApplicationIdentifier`  类型为 `String`
+    `GADApplicationIdentifier`  类型为 `String`, 值为 Google广告的 APPID 
+    
+    ![](https://tva1.sinaimg.cn/large/0081Kckwly1glhl1xscduj30c104sgm3.jpg)
  
  ## 添加广告配置参数文件
  新建参数配置文件 : ` AdvertisingConf.plist `,  配置参数如下:
@@ -82,7 +88,7 @@ pod 'ADTool'
 
 ```
  
- ![](https://tva1.sinaimg.cn/large/0081Kckwly1glhl1xscduj30c104sgm3.jpg)
+
  
 
 
