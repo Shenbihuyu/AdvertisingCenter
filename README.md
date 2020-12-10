@@ -11,20 +11,22 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-## Installation
-
-ADTool is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## 使用方法
 
 ```ruby
 
 #  use_frameworks!   # 要把 use_frameworks! 这句注释了
 
-# pod 'ADTool'
 pod 'ADTool', :git => 'https://github.com/Shenbihuyu/AdvertisingCenter.git'
 
 ```
 
+假如报了下面两个错误,可以在顶部加上这一句
+
+```ruby
+# 解决因为 cocoapods 库引起的 Assets.xcassets报错和 script phase “[CP] Copy Pods Resources” 冲突
+install! 'cocoapods', :disable_input_output_paths => true
+```
 
 ## Using
 
@@ -36,9 +38,12 @@ pod 'ADTool', :git => 'https://github.com/Shenbihuyu/AdvertisingCenter.git'
     `GADApplicationIdentifier`  类型为 `String`, 值为 Google广告的 APPID 
     
     ![](https://tva1.sinaimg.cn/large/0081Kckwly1glhl1xscduj30c104sgm3.jpg)
+    
+
  
  ## 添加广告配置参数文件
- 新建参数配置文件 : ` AdvertisingConf.plist `,  配置参数如下:
+ 
+ 在项目中新建参数配置文件 : ` AdvertisingConf.plist `,  配置参数如下:
     
 ```
 <plist version="1.0">
@@ -57,6 +62,9 @@ pod 'ADTool', :git => 'https://github.com/Shenbihuyu/AdvertisingCenter.git'
         <string>xxx</string>
         <!-- 激励视频 -->
         <key>rewardedVideoID</key>
+        <string>xxx</string>
+        <!-- 开屏 -->
+        <key>splashAdID</key>
         <string>xxx</string>
     </dict>
     

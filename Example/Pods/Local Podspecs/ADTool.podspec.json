@@ -1,6 +1,6 @@
 {
   "name": "ADTool",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "summary": "广告通用工具",
   "description": "穿山甲广告联盟和Google广告联盟",
   "homepage": "https://github.com/Shenbihuyu/AdvertisingCenter",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Shenbihuyu/AdvertisingCenter.git",
-    "tag": "1.0.2"
+    "tag": "1.0.3"
   },
   "platforms": {
     "ios": "9.0"
@@ -29,7 +29,7 @@
 
     ],
     "Google-Mobile-Ads-SDK": [
-      "~> 7.55.1"
+
     ]
   }
 }

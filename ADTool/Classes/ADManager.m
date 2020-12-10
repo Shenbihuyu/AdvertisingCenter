@@ -8,18 +8,16 @@
 
 #import "ADManager.h"
 #import <BUAdSDK/BUAdSDK.h>
-#import <BUFoundation/BUFoundation.h>
-
 #import "BUAdBanner.h"
 #import "BUAdInterstitial.h"
 #import "BUAdRewardVideo.h"
 #import "BUAdVideoAd.h"
 #import "BUAdSplashAd.h"
-
 #import "AdmobBanner.h"
 #import "AdmobInterstitial.h"
 #import "AdmobRewardedVideo.h"
 #import "AdmobVideoAd.h"
+#import "AdmobSplashAd.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
 #define KOperationNumber @"ADManager_OperationNumber"
@@ -146,6 +144,9 @@ printf("ADManager %s\n",[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);\
     switch (_adType) {
         case BUAd:
             splash = [BUAdSplashAd shareInstance];
+            break;
+        case Admob:
+            splash = [AdmobSplashAd shareInstance];
             break;
         default:
             splash = [SBHYSplashAd shareInstance];
