@@ -1,5 +1,5 @@
 PODS:
-  - ADTool (1.0.0):
+  - ADTool (1.0.2):
     - Bytedance-UnionAD
     - Google-Mobile-Ads-SDK (~> 7.55.1)
   - Bytedance-UnionAD (3.3.6.0)
@@ -52,7 +52,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADTool: ee706623b68e6bcdbe354160edd91e55611bd753
+  ADTool: 01fd012685345758f469fd8828aa223a84a73d53
   Bytedance-UnionAD: e401c7ece431e465d4ff476e6511bab6f755f0ac
   Google-Mobile-Ads-SDK: f206aff290f26fde422495c6cd187e50efbed57e
   GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e

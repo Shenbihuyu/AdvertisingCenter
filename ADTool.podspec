@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ADTool'
-  s.version          = '1.0.0'
+  s.version          = '1.0.2'
   s.summary          = '广告通用工具'
 
 # This description is used to generate tags and improve search results.
@@ -36,9 +36,9 @@ Pod::Spec.new do |s|
 
   # s.vendored_frameworks = 'ADTool/Classes/**/*.framework'
 
-  # s.resource_bundles = {
-  #   'ADTool' => ['ADTool/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'ADTool' => ['ADTool/Assets/*.png']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
  
