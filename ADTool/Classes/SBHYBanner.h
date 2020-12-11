@@ -25,6 +25,7 @@ typedef enum {
 
 + (instancetype)shareInstance;
 - (UIView *)refreshBanner;
+- (UIView *)refreshBannerWithBannerID:(NSString*)slotID;
 - (void)removeBanner;
 
 @end

@@ -32,6 +32,17 @@
     return self.bannerView;
 }
 
+- (UIView *)refreshBannerWithBannerID:(NSString*)slotID {
+    self.bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    if(self.layout != NoLayout){
+        [self addBannerViewToView];
+    }
+    self.bannerView.adUnitID = slotID;
+    self.bannerView.rootViewController = self.rootViewContrller;
+    [self.bannerView loadRequest:[GADRequest request]];
+    return self.bannerView;
+}
+
 - (void)addBannerViewToView {
     self.bannerView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.rootViewContrller.view addSubview:self.bannerView];

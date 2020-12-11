@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ADTool'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = '广告通用工具'
 
 # This description is used to generate tags and improve search results.
@@ -26,6 +26,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '小毅' => '2394096095@qq.com' }
   s.source           = { :git => 'https://github.com/Shenbihuyu/AdvertisingCenter.git', :tag => s.version.to_s }
+  # s.source           = { :git => 'git@github.com:Shenbihuyu/AdvertisingCenter.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
@@ -54,7 +55,8 @@ Pod::Spec.new do |s|
   #   'OTHER_LDFLAGS' => '-ObjC'
   # }
 
-  # s.requires_arc = true
+  s.requires_arc = true
+  s.static_framework = true
 
 
 end

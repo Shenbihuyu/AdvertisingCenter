@@ -19,7 +19,7 @@
 @implementation BUAdBanner
 
 -  (UIView *)refreshBanner {
-    if (self.bannerView == nil) {
+//    if (self.bannerView == nil) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"AdvertisingConf" ofType:@"plist"];
         NSDictionary *dict =[NSDictionary dictionaryWithContentsOfFile:path];
         NSString *slotID = dict[@"BUAd"][@"bannerID"];
@@ -29,7 +29,21 @@
         if(self.layout != NoLayout){
             [self addBannerViewToView];
         }
-    }
+//    }
+    [self.bannerView loadAdData];
+    
+    return self.bannerView;
+}
+
+- (UIView *)refreshBannerWithBannerID:(NSString*)slotID {
+//    if (self.bannerView == nil) {
+         self.bannerView = [[BUNativeExpressBannerView alloc] initWithSlotID:slotID rootViewController:self.rootViewContrller adSize:self.adSize IsSupportDeepLink:NO interval:30];
+        self.bannerView.delegate = self;
+        self.bannerView.clipsToBounds = YES;
+        if(self.layout != NoLayout){
+            [self addBannerViewToView];
+        }
+//    }
     [self.bannerView loadAdData];
     
     return self.bannerView;
