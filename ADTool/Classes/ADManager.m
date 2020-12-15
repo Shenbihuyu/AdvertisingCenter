@@ -93,7 +93,7 @@ printf("ADManager %s\n",[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);\
             //获取当前设备语言
             NSArray *appLanguages = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
             NSString *languageName = [appLanguages objectAtIndex:0];
-            if([languageName isEqualToString:@"zh-Hans-CN"]){
+            if([languageName containsString:@"zh-Hans"]){
                 [self SBHYADType:BUAd];
             }else{
                 [self SBHYADType:Admob];
