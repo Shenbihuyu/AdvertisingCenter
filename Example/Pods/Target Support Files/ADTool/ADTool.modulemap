@@ -1,6 +1,0 @@
-framework module ADTool {
-  umbrella header "ADTool-umbrella.h"
-
-  export *
-  module * { export * }
-}

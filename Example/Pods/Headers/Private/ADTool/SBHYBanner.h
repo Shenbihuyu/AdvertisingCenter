@@ -1,1 +1,0 @@
-../../../../../ADTool/Classes/SBHYBanner.h

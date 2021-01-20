@@ -1,1 +1,0 @@
-../../../../../ADTool/Classes/Admob/AdmobVideoAd.h

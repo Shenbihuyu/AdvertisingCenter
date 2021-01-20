@@ -1,6 +1,14 @@
 # OS X
 .DS_Store
 
+## 追加
+DerivedData
+*.xcuserstate
+*.DS_Store
+Podfile.lock
+Pods
+*.xcworkspace
+
 # Xcode
 build/
 *.pbxuser

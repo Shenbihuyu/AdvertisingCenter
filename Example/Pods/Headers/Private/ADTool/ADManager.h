@@ -1,1 +1,0 @@
-../../../../../ADTool/Classes/ADManager.h
