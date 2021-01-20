@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ADTool'
-  s.version          = '1.0.7'
+  s.version          = '1.0.8'
   s.summary          = '广告通用工具'
 
 # This description is used to generate tags and improve search results.
@@ -44,8 +44,9 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
  
 
-  s.dependency 'Bytedance-UnionAD'#, '~> 3.3.1.5'
-  s.dependency 'Google-Mobile-Ads-SDK'#, '~> 7.55.1'
+  s.dependency 'Ads-CN'#, '~> 3.3.1.5'
+  # s.dependency 'Bytedance-UnionAD'#, '~> 3.4.2.3'
+  s.dependency 'Google-Mobile-Ads-SDK'#, '~>  8.0.0'
 
  
   # s.pod_target_xcconfig  =  {  'OTHER_LDFLAGS'  =>  '-lObjC'  }

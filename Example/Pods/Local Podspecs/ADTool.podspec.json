@@ -1,6 +1,6 @@
 {
   "name": "ADTool",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "summary": "广告通用工具",
   "description": "穿山甲广告联盟和Google广告联盟",
   "homepage": "https://github.com/Shenbihuyu/AdvertisingCenter",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Shenbihuyu/AdvertisingCenter.git",
-    "tag": "1.0.4"
+    "tag": "1.0.8"
   },
   "platforms": {
     "ios": "9.0"
@@ -25,13 +25,11 @@
     ]
   },
   "dependencies": {
-    "Bytedance-UnionAD": [
+    "Ads-CN": [
 
     ],
     "Google-Mobile-Ads-SDK": [
 
     ]
-  },
-  "requires_arc": true,
-  "static_framework": true
+  }
 }

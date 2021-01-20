@@ -1,8 +1,14 @@
 PODS:
-  - ADTool (1.0.4):
-    - Bytedance-UnionAD
+  - Ads-CN (3.4.2.3):
+    - Ads-CN/BUAdSDK (= 3.4.2.3)
+  - Ads-CN/BUAdSDK (3.4.2.3):
+    - Ads-CN/BUFoundation
+    - Ads-CN/Domestic
+  - Ads-CN/BUFoundation (3.4.2.3)
+  - Ads-CN/Domestic (3.4.2.3)
+  - ADTool (1.0.8):
+    - Ads-CN
     - Google-Mobile-Ads-SDK
-  - Bytedance-UnionAD (3.3.6.0)
   - Google-Mobile-Ads-SDK (7.69.0):
     - GoogleAppMeasurement (~> 7.0)
     - GoogleUserMessagingPlatform (~> 1.1)
@@ -41,8 +47,8 @@ DEPENDENCIES:
   - ADTool (from `../`)
 
 SPEC REPOS:
-  trunk:
-    - Bytedance-UnionAD
+  https://github.com/CocoaPods/Specs.git:
+    - Ads-CN
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
@@ -55,8 +61,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADTool: f64deef7b8077a162e55e807d60854e26ab29252
-  Bytedance-UnionAD: e401c7ece431e465d4ff476e6511bab6f755f0ac
+  Ads-CN: e73f0137d12d841eb2cfcfecbe75c0d3f74d5889
+  ADTool: 62ae7386b374dc37642698455b2bf46bcf4b8a25
   Google-Mobile-Ads-SDK: 2f288748a42920d1c744946a460896a95b0e9110
   GoogleAppMeasurement: 57a0df93dc2feb5176b1bac06012dbd725191ba5
   GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
@@ -64,6 +70,6 @@ SPEC CHECKSUMS:
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: a0224ebe52d2fc552cbf6ac35fcfb7eceb4c744d
+PODFILE CHECKSUM: 12727f51751024b60de0af5d7815d738d8d4e967
 
 COCOAPODS: 1.9.3

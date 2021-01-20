@@ -5,30 +5,30 @@
 	<key>Admob</key>
 	<dict>
 		<key>appID</key>
-		<string>xxx</string>
+		<string>ca-app-pub-3940256099942544~1458002511</string>
 		<key>bannerID</key>
-		<string>xxx</string>
+		<string>ca-app-pub-3940256099942544/2934735716</string>
 		<key>interstitialID</key>
-		<string>xxx</string>
+		<string>ca-app-pub-3940256099942544/5135589807</string>
 		<key>rewardedVideoID</key>
-		<string>xxx</string>
+		<string>ca-app-pub-3940256099942544/1712485313</string>
 		<key>splashAdID</key>
-		<string>xxx</string>
+		<string>ca-app-pub-3940256099942544/5662855259</string>
 	</dict>
 	<key>BUAd</key>
 	<dict>
+        <key>appID</key>
+        <string>5000546</string>
 		<key>fullscreenAdID</key>
-		<string>xxx</string>
-		<key>appID</key>
-		<string>xxx</string>
+		<string>900546299</string>
 		<key>bannerID</key>
-		<string>xxx</string>
+		<string>900546859</string>
 		<key>interstitialID</key>
-		<string>xxx</string>
+		<string>900546957</string>
 		<key>rewardedVideoID</key>
-		<string>xxx</string>
+		<string>900546826</string>
 		<key>splashAdID</key>
-		<string>xxx</string>
+		<string>800546808</string>
 	</dict>
 </dict>
 </plist>

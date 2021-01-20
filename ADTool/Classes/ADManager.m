@@ -86,6 +86,12 @@ printf("ADManager %s\n",[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);\
             break;
         case Admob:{
             [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
+
+#ifdef DEBUG
+            NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+            GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers =
+            @[ idfv  ]; // Sample device ID
+#endif
         }
             break;
         case Automatic:
