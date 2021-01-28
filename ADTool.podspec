@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ADTool'
-  s.version          = '1.0.8'
+  s.version          = '1.0.9'
   s.summary          = '广告通用工具'
 
 # This description is used to generate tags and improve search results.
@@ -57,7 +57,7 @@ Pod::Spec.new do |s|
   # }
 
   # s.requires_arc = true
-  # s.static_framework = true
+  s.static_framework = true
 
 
 end
