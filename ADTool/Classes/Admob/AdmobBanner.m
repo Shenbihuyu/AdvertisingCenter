@@ -71,26 +71,50 @@
     ]];
     switch (self.layout) {
         case Top:
-            [self.rootViewContrller.view addConstraints:@[
-                [NSLayoutConstraint constraintWithItem:self.bannerView
-                                             attribute:NSLayoutAttributeTop
-                                             relatedBy:NSLayoutRelationEqual
-                                                toItem:self.rootViewContrller.view
-                                             attribute:NSLayoutAttributeTop
-                                            multiplier:1
-                                              constant:0]
-            ]];
+            if (@available(iOS 11.0, *)) {
+                [self.rootViewContrller.view addConstraints:@[
+                    [NSLayoutConstraint constraintWithItem:self.bannerView
+                                                 attribute:NSLayoutAttributeTop
+                                                 relatedBy:NSLayoutRelationEqual
+                                                    toItem:self.rootViewContrller.view.safeAreaLayoutGuide
+                                                 attribute:NSLayoutAttributeTop
+                                                multiplier:1
+                                                  constant:0]
+                ]];
+            } else {
+                [self.rootViewContrller.view addConstraints:@[
+                    [NSLayoutConstraint constraintWithItem:self.bannerView
+                                                 attribute:NSLayoutAttributeTop
+                                                 relatedBy:NSLayoutRelationEqual
+                                                    toItem:self.rootViewContrller.view
+                                                 attribute:NSLayoutAttributeTop
+                                                multiplier:1
+                                                  constant:0]
+                ]];
+            }
             break;
         case Bottom:
-            [self.rootViewContrller.view addConstraints:@[
-                [NSLayoutConstraint constraintWithItem:self.bannerView
-                                             attribute:NSLayoutAttributeBottom
-                                             relatedBy:NSLayoutRelationEqual
-                                                toItem:self.rootViewContrller.view
-                                             attribute:NSLayoutAttributeBottom
-                                            multiplier:1
-                                              constant:0]
-            ]];
+            if (@available(iOS 11.0, *)) {
+                [self.rootViewContrller.view addConstraints:@[
+                    [NSLayoutConstraint constraintWithItem:self.bannerView
+                                                 attribute:NSLayoutAttributeBottom
+                                                 relatedBy:NSLayoutRelationEqual
+                                                    toItem:self.rootViewContrller.view.safeAreaLayoutGuide
+                                                 attribute:NSLayoutAttributeBottom
+                                                multiplier:1
+                                                  constant:0]
+                ]];
+            } else {
+                [self.rootViewContrller.view addConstraints:@[
+                    [NSLayoutConstraint constraintWithItem:self.bannerView
+                                                 attribute:NSLayoutAttributeBottom
+                                                 relatedBy:NSLayoutRelationEqual
+                                                    toItem:self.rootViewContrller.view
+                                                 attribute:NSLayoutAttributeBottom
+                                                multiplier:1
+                                                  constant:0]
+                ]];
+            }
             
         default:
             break;

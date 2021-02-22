@@ -9,25 +9,29 @@
 #import "AdmobInterstitial.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
-@interface AdmobInterstitial()<GADInterstitialDelegate>
+@interface AdmobInterstitial()<GADNativeAdDelegate, GADFullScreenContentDelegate>
 
-@property (nonatomic, strong) GADInterstitial *interstitialAd;
+@property (nonatomic, strong) GADInterstitialAd *interstitialAd;
 
 @end
 
+/// 插屏广告
 @implementation AdmobInterstitial
 
 - (void)createAndLoadInterstitial{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"AdvertisingConf" ofType:@"plist"];
     NSDictionary *dict =[NSDictionary dictionaryWithContentsOfFile:path];
     NSString *AdmobInterstitialID = dict[@"Admob"][@"interstitialID"];
-    self.interstitialAd = [[GADInterstitial alloc] initWithAdUnitID:AdmobInterstitialID];
-    self.interstitialAd.delegate = self;
-    [self.interstitialAd loadRequest:[GADRequest request]];
+    [GADInterstitialAd loadWithAdUnitID:AdmobInterstitialID
+                                request:[GADRequest request]
+                      completionHandler:^(GADInterstitialAd * _Nullable interstitialAd, NSError * _Nullable error) {
+        self.interstitialAd = interstitialAd;
+        self.interstitialAd.fullScreenContentDelegate = self;
+    }];
 }
 
 - (void)show{
-    if (self.interstitialAd.isReady) {
+    if (self.interstitialAd != nil) {
         [self.interstitialAd presentFromRootViewController:self.rootViewContrller];
     } else {
         NSLog(@"Ad wasn't ready");
@@ -36,19 +40,23 @@
 }
 
 #pragma mark - GADInterstitialDelegate
-- (void)interstitialDidReceiveAd:(nonnull GADInterstitial *)ad{
+
+/// Tells the delegate that an impression has been recorded for the ad.
+- (void)adDidRecordImpression:(nonnull id<GADFullScreenPresentingAd>)ad {
+
+}
+
+/// Tells the delegate that the ad failed to present full screen content.
+- (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad didFailToPresentFullScreenContentWithError:(nonnull NSError *)error{
     
 }
 
-/// Called when an interstitial ad request completed without an interstitial to
-/// show. This is common since interstitials are shown sparingly to users.
-- (void)interstitial:(nonnull GADInterstitial *)ad
-didFailToReceiveAdWithError:(nonnull GADRequestError *)error{
+- (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
     
 }
 
-
-- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
+/// Tells the delegate that the user earned a reward.
+- (void)rewardedAd:(nonnull GADRewardedAd *)rewardedAd userDidEarnReward:(nonnull GADAdReward *)reward{
     [self createAndLoadInterstitial];
 }
 

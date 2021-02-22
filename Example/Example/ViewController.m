@@ -74,7 +74,9 @@
 - (IBAction)rewardVideoBtn:(id)sender {
     [[[ADManager shareInstance] rewardedVideo] show:^(BOOL earnReward){
         if(earnReward){
-            NSLog(@"earnReward");
+            NSLog(@"广告结束，获得奖励");
+        }else {
+            NSLog(@"广告结束，没有奖励");
         }
     }];
 }

@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[ADManager shareInstance] SBHYADType:BUAd];
+    [[ADManager shareInstance] SBHYADType:Admob];
     [ADManager shareInstance].threshold = 5;
     [ADManager shareInstance].showLog = YES;
     [ADManager shareInstance].recordAdType = Video;
